@@ -46,12 +46,32 @@
 }
 
 /* Base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--black-primary-color);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.7;
+  margin: 0;
+
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/* main {
+} */
+/* Фон??? */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
 }
 
 address {
@@ -59,7 +79,24 @@ address {
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container.hero-section-container {
+  padding-right: 0;
+}
+
+.section {
+  padding: 48px 0;
 }
 
 .section-title {
@@ -67,6 +104,12 @@ ul {
   font-weight: 700;
   font-size: 64px;
   line-height: 1.15;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.section-title.left {
+  text-align: left;
 }
 
 /* Button style */
@@ -79,6 +122,7 @@ ul {
   border: 2px solid var(--blue-primary-color);
   border-radius: 32px;
   cursor: pointer;
+  padding: 16px 32px;
 }
 
 .button:hover {
@@ -98,7 +142,6 @@ ul {
 
 .link:hover {
   color: var(--blue-primary-color);
-  font-weight: 700;
 }
 
 /* Text style */
@@ -106,22 +149,109 @@ ul {
   color: var(--blue-primary-color);
 }
 
+/* Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 32px 0;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  gap: 56px;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
 /* Hero section */
+.hero-section {
+  margin-bottom: 156px;
+}
+
+.hero-container {
+  padding-left: 106px;
+
+  background-image: url("../images/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 238px;
+  gap: 16px;
+}
+
 .hero-section--title {
+  color: var(--blue-primary-color);
+  max-width: 529px;
+  overflow-wrap: break-word;
   font-size: 140px;
   line-height: 0.82;
+  margin-bottom: 40px;
 }
 
-.hero-section .hero-text {
+.hero-text {
   line-height: 1.17;
+  margin-bottom: 16px;
 }
 
-.hero-section .hero-info {
+.hero-info {
   line-height: 1.5;
   font-size: 12px;
+  text-align: center;
 }
 
 /* Info section */
+.info-container {
+  display: flex;
+  gap: 32px;
+}
+
+.info-img-container {
+  max-width: 500px;
+  position: relative;
+}
+
+.info-image-before {
+  position: absolute;
+
+  top: -40px;
+}
+
+.info-image-after {
+  position: absolute;
+  bottom: -220px;
+  left: 220px;
+}
+
+.info-title {
+  max-width: 529px;
+  margin-bottom: 40px;
+}
+
 .info-text .bold-text {
   text-transform: capitalize;
   font-weight: 600;
@@ -129,20 +259,91 @@ ul {
 
 .info-text {
   font-size: 22px;
+  margin-bottom: 0;
+}
+
+.info-text:nth-child(3) {
+  margin-bottom: 40px;
 }
 
 /* Adventages section */
+.advantages-section {
+  padding-top: 176px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+
 .adventages-list-item {
+  flex-basis: calc((100% - 112px) / 3);
+}
+
+.advantages-card {
+  border: 1px solid grey; /*временное решение*/
+  border-radius: 32px;
+  padding: 24px 32px;
+}
+
+.advantages-card-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 1.3;
+  margin-bottom: 0;
 }
 
 /* Servise section */
+.service-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  /* временное решение нужно ли здесь? */
+}
+
 .service-list-item {
-  line-height: 1.18;
+  flex-basis: calc((100% - 32px) / 3);
+}
+/* временное решение нужно ли здесь
+ */
+
+.service-card {
+  height: 456px;
+  border: 1px solid black; /*временное решение*/
+  border-radius: 4px 120px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(1, 28, 68, 0) 0%,
+    rgba(1, 28, 68, 0.7258) 72.5%,
+    rgba(1, 28, 68, 1) 100%
+  );
+}
+
+.service-list-title {
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 22px;
+  /* додати колор */
+}
+
+/* Contact-section */
+.contact-section {
+  padding-bottom: 96px;
 }
 
 /* Footer */
+.footer {
+  background-color: var(--black-primary-color);
+  background-image: url("../images/footer-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .footer-link {
+  color: var(--white-primary-color);
   font-size: 16px;
   line-height: 1.17;
 }
