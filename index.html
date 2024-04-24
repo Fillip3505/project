@@ -34,13 +34,25 @@
           </nav>
           <ul class="header-links">
             <li>
-              <a class="link" href="#" target="_blank">фейсбук</a>
+              <a class="link" href="#" target="_blank">
+                <svg class="header-icon" width="32" height="32">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a class="link" href="#" target="_blank">инста</a>
+              <a class="link" href="#" target="_blank">
+                <svg class="header-icon" width="32" height="32">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a class="link" href="#" target="_blank">дзвінок</a>
+              <a class="link" href="#" target="_blank">
+                <svg class="header-icon" width="32" height="32">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -88,7 +100,7 @@
               </p>
               <p class="info-text">З нами краса назавжди!</p>
             </div>
-            <!-- <div class="info-img-container">
+            <div class="info-img-container">
               <img
                 class="info-image-before"
                 src="./images/before.jpg"
@@ -99,42 +111,65 @@
                 src="./images/after.jpg"
                 alt="Стан шкіри після"
               />
-            </div> -->
+            </div>
           </div>
         </div>
       </section>
       <section class="advantages-section section" id="advantages-section">
         <div class="container">
-          <h2 class="section-title">
-            Чому люди <br />
-            <span class="accent">обирають нас</span>
-          </h2>
-          <ul class="advantages-list">
-            <li class="adventages-list-item">
-              <article class="advantages-card">
-                <h3 class="advantages-card-title">
-                  Всі наші косметологи мають вищу медичну освіту та стаж роботи
-                  від 5 років
-                </h3>
-              </article>
-            </li>
-            <li class="adventages-list-item">
-              <article class="advantages-card">
-                <h3 class="advantages-card-title">
-                  Використовуємо тільки професійне обладнання та косметику,
-                  перевірену часом
-                </h3>
-              </article>
-            </li>
-            <li class="adventages-list-item">
-              <article class="advantages-card">
-                <h3 class="advantages-card-title">
-                  Наша мета - підкреслити переваги та приховати недоліки, а не
-                  переробити
-                </h3>
-              </article>
-            </li>
-          </ul>
+          <div class="advantages-container">
+            <h2 class="section-title advantages-title">
+              Чому люди
+              <span class="accent">обирають нас</span>
+            </h2>
+            <ul class="advantages-list">
+              <li class="adventages-list-item">
+                <article class="advantages-card">
+                  <div class="icon-container">
+                    <img
+                      class="advantages-icon"
+                      src="./images/card1.svg"
+                      alt="osvidchenyi-personal-icon"
+                    />
+                  </div>
+                  <h3 class="advantages-card-title">
+                    Всі наші косметологи мають вищу медичну освіту та стаж
+                    роботи від 5 років
+                  </h3>
+                </article>
+              </li>
+              <li class="adventages-list-item">
+                <article class="advantages-card">
+                  <div class="icon-container">
+                    <img
+                      class="advantages-icon"
+                      src="./images/card2.svg"
+                      alt="profesyine-obladnanya-icon"
+                    />
+                  </div>
+                  <h3 class="advantages-card-title">
+                    Використовуємо тільки професійне обладнання та косметику,
+                    перевірену часом
+                  </h3>
+                </article>
+              </li>
+              <li class="adventages-list-item">
+                <article class="advantages-card">
+                  <div class="icon-container">
+                    <img
+                      class="advantages-icon"
+                      src="./images/card3.svg"
+                      alt="nasha-meta-yakist-icon"
+                    />
+                  </div>
+                  <h3 class="advantages-card-title">
+                    Наша мета - підкреслити переваги та приховати недоліки, а не
+                    переробити
+                  </h3>
+                </article>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="service-section section" id="service-section">
@@ -142,23 +177,35 @@
           <h2 class="section-title">
             Наші <span class="accent">процедури</span>
           </h2>
-          <ul class="service-list">
-            <li class="service-list-item">
-              <article class="service-card">
-                <h3 class="service-list-title">Маски для обличчя</h3>
-              </article>
-            </li>
-            <li class="service-list-item">
-              <article class="service-card">
-                <h3 class="service-list-title">Ін'єкції для обличчя</h3>
-              </article>
-            </li>
-            <li class="service-list-item">
-              <article class="service-card">
-                <h3 class="service-list-title">Очищення обличчя</h3>
-              </article>
-            </li>
-          </ul>
+          <div class="service-container">
+            <button class="carousel-button" type="button">
+              <svg width="16" height="16">
+                <use href="./images/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <ul class="service-list">
+              <li class="service-list-item">
+                <article class="service-card">
+                  <h3 class="service-list-title">Маски для обличчя</h3>
+                </article>
+              </li>
+              <li class="service-list-item">
+                <article class="service-card">
+                  <h3 class="service-list-title">Ін'єкції для обличчя</h3>
+                </article>
+              </li>
+              <li class="service-list-item">
+                <article class="service-card">
+                  <h3 class="service-list-title">Очищення обличчя</h3>
+                </article>
+              </li>
+            </ul>
+            <button class="carousel-button" type="button">
+              <svg width="16" height="16">
+                <use href="./images/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <section class="contact-section section" id="contact-section">
@@ -166,14 +213,20 @@
           <h2 class="section-title">
             Як нас <span class="accent">знайти</span>
           </h2>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.932393986853!2d30.513304392298895!3d50.4423599147027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsINCj0LrRgNCw0LjQvdCwLCAwMjAwMA!5e0!3m2!1sru!2suk!4v1712870667574!5m2!1sru!2suk"
-            width="605"
-            height="481"
-          ></iframe>
-          <article>
-            <h3>Запишіться <span>безкоштовно</span> та отримайте подарунок</h3>
-          </article>
+          <div class="contact-container">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.932393986853!2d30.513304392298895!3d50.4423599147027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsINCj0LrRgNCw0LjQvdCwLCAwMjAwMA!5e0!3m2!1sru!2suk!4v1712870667574!5m2!1sru!2suk"
+              width="605"
+              height="481"
+            ></iframe>
+            <article class="contact-form">
+              <h3>
+                Запишіться <span class="accent">безкоштовно</span> та отримайте
+                подарунок
+              </h3>
+            </article>
+          </div>
         </div>
       </section>
     </main>

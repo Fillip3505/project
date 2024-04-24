@@ -60,7 +60,7 @@ body {
 
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
 }
 
 /* main {
@@ -178,9 +178,17 @@ ul {
   gap: 32px;
 }
 
+.header-icon {
+  fill: var(--black-primary-color);
+}
+
+.header-icon:hover {
+  fill: var(--blue-primary-color);
+}
+
 /* Hero section */
 .hero-section {
-  margin-bottom: 156px;
+  padding-bottom: 126px;
 }
 
 .hero-container {
@@ -227,24 +235,26 @@ ul {
 /* Info section */
 .info-container {
   display: flex;
+  justify-content: space-between;
   gap: 32px;
 }
 
 .info-img-container {
-  max-width: 500px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 41%;
+  height: 100%;
+  gap: 60px;
 }
 
 .info-image-before {
-  position: absolute;
-
-  top: -40px;
+  max-width: 327px;
 }
 
 .info-image-after {
-  position: absolute;
-  bottom: -220px;
-  left: 220px;
+  max-width: 327px;
+  margin: 0 0 0 auto;
 }
 
 .info-title {
@@ -266,7 +276,23 @@ ul {
   margin-bottom: 40px;
 }
 
+.info-text-container {
+  width: 59%;
+  padding-top: 40px;
+}
+
 /* Adventages section */
+.advantages-container {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.advantages-title {
+  max-width: 444px;
+  margin: 0 auto 48px;
+}
+
 .advantages-section {
   padding-top: 176px;
 }
@@ -282,9 +308,14 @@ ul {
 }
 
 .advantages-card {
-  border: 1px solid grey; /*временное решение*/
-  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
   padding: 24px 32px;
+  border-radius: 32px;
+  box-shadow: 0 4px 4px 0 rgba(168, 198, 245, 0.38);
+  background-color: var(--white-primary-color);
 }
 
 .advantages-card-title {
@@ -295,23 +326,35 @@ ul {
   margin-bottom: 0;
 }
 
+.advantages-icon {
+  max-width: 48px;
+  max-height: 48px;
+}
+
+.icon-container {
+  margin-bottom: 8px;
+}
+
 /* Servise section */
+.service-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
 .service-list {
   display: flex;
+  flex-basis: 87.5%;
   gap: 16px;
-  flex-wrap: wrap;
-  /* временное решение нужно ли здесь? */
 }
 
 .service-list-item {
   flex-basis: calc((100% - 32px) / 3);
 }
-/* временное решение нужно ли здесь
- */
 
 .service-card {
   height: 456px;
-  border: 1px solid black; /*временное решение*/
+  padding: 372px 77px 32px 115px;
   border-radius: 4px 120px;
   background-image: linear-gradient(
     180deg,
@@ -322,15 +365,56 @@ ul {
 }
 
 .service-list-title {
+  text-align: center;
+  margin-bottom: 0;
   line-height: 1.2;
   font-weight: 400;
   font-size: 22px;
-  /* додати колор */
+  color: var(--white-primary-color);
+}
+
+/* Carousel */
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 50%;
+  fill: var(--black-primary-color);
+  background-color: transparent;
+  border: 1px solid var(--black-primary-color);
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  background-color: var(--blue-primary-color);
+  border: var(--white-primary-color);
+  fill: var(--white-primary-color);
 }
 
 /* Contact-section */
 .contact-section {
   padding-bottom: 96px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.map {
+  border: none;
+  border-radius: 32px;
+}
+
+.contact-form {
+  max-width: 40%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 32px;
 }
 
 /* Footer */
