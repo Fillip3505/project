@@ -46,7 +46,9 @@
 }
 
 /* Base */
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -58,20 +60,20 @@ body {
   line-height: 1.7;
   margin: 0;
 
-  background-image: url("../images/background.jpg");
+  background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 688px;
 }
-
-/* main {
-} */
-/* Фон??? */
 
 h1,
 h2,
 h3,
 p {
   margin-top: 0;
+}
+
+a {
+  display: inline-block;
 }
 
 address {
@@ -123,6 +125,7 @@ ul {
   border-radius: 32px;
   cursor: pointer;
   padding: 16px 32px;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .button:hover {
@@ -130,31 +133,41 @@ ul {
   color: var(--black-primary-color);
 }
 
-/* Link style */
-/* .nav-link {
-} */
-
-.link {
-  color: var(--black-primary-color);
-  text-decoration: none;
-  line-height: 1.17;
-}
-
-.link:hover {
-  color: var(--blue-primary-color);
-}
-
 /* Text style */
 .accent {
   color: var(--blue-primary-color);
 }
 
+/* Icons style */
+.icon {
+  fill: var(--black-primary-color);
+  transition: fill 0.2s ease-in;
+}
+
+.icon:hover {
+  fill: var(--blue-primary-color);
+}
+
+.footer-icon {
+  fill: var(--white-primary-color);
+}
+
 /* Header */
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+}
+
 .header-container {
   display: flex;
   align-items: center;
   gap: 40px;
-  padding: 32px 0;
+  padding: 32px 32px;
 }
 
 .header-nav {
@@ -172,27 +185,31 @@ ul {
   gap: 56px;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: var(--black-primary-color);
+  line-height: 1.17;
+  transition: color 0.2s ease-in;
+}
+
+.nav-link:hover {
+  color: var(--blue-primary-color);
+}
+
 .header-links {
   display: flex;
   align-items: center;
   gap: 32px;
 }
 
-.header-icon {
-  fill: var(--black-primary-color);
-}
-
-.header-icon:hover {
-  fill: var(--blue-primary-color);
-}
-
 /* Hero section */
-.hero-section {
-  padding-bottom: 126px;
-}
+/* .hero-section {
+  
+} */
 
 .hero-container {
   padding-left: 106px;
+  padding-bottom: 126px;
 
   background-image: url("../images/hero-background.jpg");
   background-repeat: no-repeat;
@@ -203,6 +220,7 @@ ul {
 .logo-container {
   display: flex;
   flex-direction: column-reverse;
+  padding-top: 122px;
 }
 
 .button-container {
@@ -227,6 +245,7 @@ ul {
 }
 
 .hero-info {
+  margin-bottom: 0;
   line-height: 1.5;
   font-size: 12px;
   text-align: center;
@@ -245,7 +264,7 @@ ul {
   justify-content: space-between;
   width: 41%;
   height: 100%;
-  gap: 60px;
+  gap: 40px;
 }
 
 .info-image-before {
@@ -255,6 +274,7 @@ ul {
 .info-image-after {
   max-width: 327px;
   margin: 0 0 0 auto;
+  border-radius: 100%;
 }
 
 .info-title {
@@ -362,6 +382,35 @@ ul {
     rgba(1, 28, 68, 0.7258) 72.5%,
     rgba(1, 28, 68, 1) 100%
   );
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-card:first-child {
+  background-image: linear-gradient(
+      180deg,
+      rgba(1, 28, 68, 0) 0%,
+      rgba(1, 28, 68, 0.7258) 72.5%,
+      rgba(1, 28, 68, 1) 100%
+    ),
+    url("../images/cleaning.jpg");
+}
+
+.service-card:nth-child(2) {
+  background-image: url("../images/injections.jpg");
+}
+
+.service-card:last-child {
+  background-image: linear-gradient(
+      180deg,
+      rgba(1, 28, 68, 0) 0%,
+      rgba(1, 28, 68, 0.7258) 72.5%,
+      rgba(1, 28, 68, 1) 100%
+    ),
+    url("../images/masks.jpg");
 }
 
 .service-list-title {
@@ -378,6 +427,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 44px;
   height: 44px;
   padding: 0;
@@ -386,12 +436,18 @@ ul {
   background-color: transparent;
   border: 1px solid var(--black-primary-color);
   cursor: pointer;
+  transition: bacground-color 0.3s ease-in, border 0.3s ease-in,
+    fill 0.2s ease-in;
 }
 
 .carousel-button:hover {
   background-color: var(--blue-primary-color);
   border: var(--white-primary-color);
   fill: var(--white-primary-color);
+}
+
+.carousel-button.next {
+  transform: rotate(180deg);
 }
 
 /* Contact-section */
@@ -406,19 +462,48 @@ ul {
 }
 
 .map {
+  flex-shrink: 0;
   border: none;
   border-radius: 32px;
 }
 
 .contact-form {
-  max-width: 40%;
+  flex-basis: 40%;
+  max-width: 422px;
   text-align: center;
   border: 1px solid black;
   border-radius: 32px;
 }
 
+.form-title {
+  margin-bottom: 0;
+}
+
 /* Footer */
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-adress {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.footer-link.no-margin {
+  margin-bottom: 0;
+}
+
 .footer {
+  position: relative;
+  padding: 56px 0;
   background-color: var(--black-primary-color);
   background-image: url("../images/footer-background.png");
   background-repeat: no-repeat;
@@ -426,14 +511,85 @@ ul {
   background-position: center;
 }
 
+.footer::after {
+  bottom: 0;
+  right: 0;
+  width: 260px;
+  height: 150px;
+  position: absolute;
+  background-image: url("../images/decor-medicine.png");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.footer-icons {
+  display: flex;
+  gap: 24px;
+}
+
+.address-list,
+.adress-info {
+  flex-basis: 50%;
+}
+
 .footer-link {
+  margin-bottom: 16px;
   color: var(--white-primary-color);
   font-size: 16px;
   line-height: 1.17;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+
+.footer-link:hover {
+  color: var(--blue-primary-color);
 }
 
 .copy-right {
+  margin-bottom: 0;
   font-size: 13px;
   line-height: 1.17;
   color: var(--grey-secondary-color);
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+  background-color: rgba(1, 31, 74, 0.5);
+  backdrop-filter: blur(5px);
+  transition: opacity 0.3s, visibility 0.3s, backdrop-filter 0.3s ease;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 720px;
+  max-height: 680px;
+  background-color: var(--black-primary-color);
+  border-radius: 48px;
+  background-image: url("../images/modal-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 42px;
+  right: 42px;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }

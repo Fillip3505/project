@@ -17,39 +17,37 @@
             </a>
             <ul class="header-menu">
               <li>
-                <a class="nav-link link" href="#info-section">Про нас</a>
+                <a class="nav-link" href="#info-section">Про нас</a>
               </li>
               <li>
-                <a class="nav-link link" href="#advantages-section">Чому ми</a>
+                <a class="nav-link" href="#advantages-section">Чому ми</a>
               </li>
               <li>
-                <a class="nav-link link" href="#service-section"
-                  >Наші процедури</a
-                >
+                <a class="nav-link" href="#service-section">Наші процедури</a>
               </li>
               <li>
-                <a class="nav-link link" href="#contact-section">Контакти</a>
+                <a class="nav-link" href="#contact-section">Контакти</a>
               </li>
             </ul>
           </nav>
           <ul class="header-links">
             <li>
-              <a class="link" href="#" target="_blank">
-                <svg class="header-icon" width="32" height="32">
+              <a class="nav-link" href="#" target="_blank">
+                <svg class="icon" width="32" height="32">
                   <use href="./images/icons.svg#icon-phone"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="link" href="#" target="_blank">
-                <svg class="header-icon" width="32" height="32">
+              <a class="nav-link" href="#" target="_blank">
+                <svg class="icon" width="32" height="32">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="link" href="#" target="_blank">
-                <svg class="header-icon" width="32" height="32">
+              <a class="nav-link" href="#" target="_blank">
+                <svg class="icon" width="32" height="32">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
@@ -67,7 +65,10 @@
               <p class="hero-text">Косметологічна клініка</p>
             </div>
             <div class="button-container">
-              <button class="hero-section--button button" type="button">
+              <button
+                class="hero-section--button modal-btn-open button"
+                type="button"
+              >
                 Замовити дзвінок
               </button>
               <p class="hero-info">
@@ -200,7 +201,7 @@
                 </article>
               </li>
             </ul>
-            <button class="carousel-button" type="button">
+            <button class="carousel-button next" type="button">
               <svg width="16" height="16">
                 <use href="./images/icons.svg#icon-arrow"></use>
               </svg>
@@ -221,7 +222,7 @@
               height="481"
             ></iframe>
             <article class="contact-form">
-              <h3>
+              <h3 class="form-title">
                 Запишіться <span class="accent">безкоштовно</span> та отримайте
                 подарунок
               </h3>
@@ -232,64 +233,95 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <nav>
-          <a href="/">
-            <img src="./images/logo.svg" alt="Логотип Beauty Zone" />
-          </a>
-          <ul>
-            <li>
-              <a class="link footer-link" href="#advantages-section">Чому ми</a>
-            </li>
-            <li>
-              <a class="link footer-link" href="#info-section">Про нас</a>
-            </li>
-            <li>
-              <a class="link footer-link" href="#service-section"
-                >Наші процедури</a
-              >
-            </li>
-            <li>
-              <a class="link footer-link" href="#contact-section">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <address>
-          <ul>
-            <li>
-              <a class="link footer-link" href="tel:+380960000007"
-                >+ 38 (096) 000 00 07</a
-              >
-            </li>
-            <li>
-              <a class="link footer-link" href="mailto:beautyzone@gmail.com"
-                >beautyzone@gmail.com
+        <div class="footer-container">
+          <nav class="footer-nav">
+            <div class="footer-logo">
+              <a href="/">
+                <img src="./images/logo.svg" alt="Логотип Beauty Zone" />
               </a>
-            </li>
-            <li>
-              <a
-                class="link footer-link"
-                href="https://maps.app.goo.gl/5vRPAHkkp8b3Gf1N9"
-                target="_blank"
-              >
-                Україна, м. Київ, вул. Тараса Шевченка 5
+            </div>
+            <ul class="footer-menu">
+              <li>
+                <a class="footer-link" href="#advantages-section">Чому ми</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#info-section">Про нас</a>
+              </li>
+              <li>
+                <a class="footer-link" href="#service-section"
+                  >Наші процедури</a
+                >
+              </li>
+              <li>
+                <a class="footer-link no-margin" href="#contact-section"
+                  >Контакти</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <address class="footer-adress">
+            <ul class="address-list">
+              <li>
+                <a class="footer-link" href="tel:+380960000007"
+                  >+ 38 (096) 000 00 07</a
+                >
+              </li>
+              <li>
+                <a class="footer-link" href="mailto:beautyzone@gmail.com"
+                  >beautyzone@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  href="https://maps.app.goo.gl/5vRPAHkkp8b3Gf1N9"
+                  target="_blank"
+                >
+                  Україна, м. Київ, <br />
+                  вул. Тараса Шевченка 5
+                </a>
+              </li>
+              <div class="footer-icons">
+                <li>
+                  <a class="footer-link no-margin" href="#">
+                    <svg class="icon footer-icon" width="42" height="42">
+                      <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer-link no-margin" href="#">
+                    <svg class="icon footer-icon" width="42" height="42">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer-link no-margin" href="#">
+                    <svg class="icon footer-icon" width="42" height="42">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </div>
+            </ul>
+            <div class="adress-info">
+              <a class="footer-link" href="#" target="_blank">
+                Політика конфіденційності
               </a>
-            </li>
-            <li>
-              <a class="link" href="#">дзвінок</a>
-            </li>
-            <li>
-              <a class="link" href="#">фейсбук</a>
-            </li>
-            <li>
-              <a class="link" href="#">инста</a>
-            </li>
-          </ul>
-          <a class="link footer-link" href="#" target="_blank">
-            Політика конфіденційності
-          </a>
-          <p class="copy-right">&copy; 2022 Дані захищені</p>
-        </address>
+              <p class="copy-right">&copy; 2022 Дані захищені</p>
+            </div>
+          </address>
+        </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
