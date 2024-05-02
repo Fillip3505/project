@@ -1,0 +1,42 @@
+.contact-section {
+  padding-bottom: 96px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.map {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 32px;
+}
+
+.contact-form {
+  flex-basis: 40%;
+  max-width: 422px;
+  max-height: 481px;
+  padding: 48px 58px;
+  text-align: center;
+  border-radius: 32px;
+  background-color: var(--black-primary-color);
+  background-image: url("../images/modal-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.form-title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.17;
+  max-width: 280px;
+  margin: 0 auto 32px;
+  color: var(--white-primary-color);
+}
+
+.form-field.contact-field {
+  margin-bottom: 16px;
+}

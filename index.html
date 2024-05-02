@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beauty Zone</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
@@ -61,14 +61,11 @@
         <div class="container hero-section-container">
           <div class="hero-container">
             <div class="logo-container">
-              <h1 class="hero-section--title left section-title">BeautyZone</h1>
+              <h1 class="hero-section--title section-title">BeautyZone</h1>
               <p class="hero-text">Косметологічна клініка</p>
             </div>
             <div class="button-container">
-              <button
-                class="hero-section--button modal-btn-open button"
-                type="button"
-              >
+              <button class="modal-btn-open button" type="button">
                 Замовити дзвінок
               </button>
               <p class="hero-info">
@@ -82,7 +79,7 @@
         <div class="container">
           <div class="info-container">
             <div class="info-text-container">
-              <h2 class="info-title left section-title">
+              <h2 class="info-title section-title">
                 Перевтілюйтесь в <span class="accent">beauty zone!</span>
               </h2>
               <p class="info-text">
@@ -187,16 +184,31 @@
             <ul class="service-list">
               <li class="service-list-item">
                 <article class="service-card">
+                  <img
+                    class="service-card-image"
+                    src="./images/masks.jpg"
+                    alt="Маски для обличчя"
+                  />
                   <h3 class="service-list-title">Маски для обличчя</h3>
                 </article>
               </li>
               <li class="service-list-item">
                 <article class="service-card">
+                  <img
+                    class="service-card-image"
+                    src="./images/injections.jpg"
+                    alt="Ін'єкції для обличчя"
+                  />
                   <h3 class="service-list-title">Ін'єкції для обличчя</h3>
                 </article>
               </li>
               <li class="service-list-item">
                 <article class="service-card">
+                  <img
+                    class="service-card-image"
+                    src="./images/cleaning.jpg"
+                    alt="Очищення обличчя"
+                  />
                   <h3 class="service-list-title">Очищення обличчя</h3>
                 </article>
               </li>
@@ -221,12 +233,63 @@
               width="605"
               height="481"
             ></iframe>
-            <article class="contact-form">
+            <form class="contact-form" name="contact-form" autocomplete="off">
               <h3 class="form-title">
                 Запишіться <span class="accent">безкоштовно</span> та отримайте
                 подарунок
               </h3>
-            </article>
+              <div class="form-field contact-field">
+                <label class="form-label visually-hidden" for="user-names">
+                  Ваше ім'я та прізвище
+                </label>
+                <input
+                  class="form-input"
+                  type="text"
+                  name="user-names"
+                  id="user-names"
+                  placeholder="Ваше ім'я та прізвище"
+                  required
+                />
+              </div>
+
+              <div class="form-field contact-field">
+                <label class="form-label visually-hidden" for="user-phone">
+                  Ваш номер телефону
+                </label>
+                <input
+                  class="form-input"
+                  type="tel"
+                  name="user-phone"
+                  id="user-phone"
+                  placeholder="Ваш номер телефону"
+                  required
+                />
+              </div>
+
+              <div class="form-field contact-field">
+                <label class="form-label visually-hidden" for="user-email">
+                  Ваша електронна пошта
+                </label>
+                <input
+                  class="form-input"
+                  type="email"
+                  name="user-email"
+                  id="user-email"
+                  placeholder="Ваша електронна пошта"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="form-button button">
+                Записатись безкоштовно
+              </button>
+              <p class="form-terms">
+                Натискаючи на кнопку я погоджуюсь
+                <a class="form-terms-link" href="#">
+                  з політикою конфіденційності
+                </a>
+              </p>
+            </form>
           </div>
         </div>
       </section>
@@ -281,30 +344,26 @@
                   вул. Тараса Шевченка 5
                 </a>
               </li>
-              <div class="footer-icons">
-                <li>
-                  <a class="footer-link no-margin" href="#">
-                    <svg class="icon footer-icon" width="42" height="42">
-                      <use href="./images/icons.svg#icon-phone"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a class="footer-link no-margin" href="#">
-                    <svg class="icon footer-icon" width="42" height="42">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a class="footer-link no-margin" href="#">
-                    <svg class="icon footer-icon" width="42" height="42">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-              </div>
             </ul>
+            <div class="footer-icons">
+              <a class="footer-link no-margin" href="#">
+                <svg class="icon footer-icon" width="42" height="42">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </a>
+
+              <a class="footer-link no-margin" href="#">
+                <svg class="icon footer-icon" width="42" height="42">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+
+              <a class="footer-link no-margin" href="#">
+                <svg class="icon footer-icon" width="42" height="42">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </div>
             <div class="adress-info">
               <a class="footer-link" href="#" target="_blank">
                 Політика конфіденційності
@@ -318,7 +377,67 @@
 
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button class="modal-btn-close" type="button">Close</button>
+        <button class="modal-btn-close" type="button">
+          <svg width="16" height="16">
+            <use href="./images/icons.svg#icon-modal-btn-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal-title">Замовити дзвінок</h2>
+        <p class="modal-text">
+          Запишіться <span class="accent">безкоштовно</span> та отримайте
+          подарунок
+        </p>
+        <form name="modal-form" autocomplete="off">
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="modal-user-names">
+              Ваше ім'я та прізвище
+            </label>
+            <input
+              class="form-input"
+              type="text"
+              name="user-names"
+              id="modal-user-names"
+              placeholder="Ваше ім'я та прізвище"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="modal-user-phone">
+              Ваш номер телефону
+            </label>
+            <input
+              class="form-input"
+              type="tel"
+              name="user-phone"
+              id="modal-user-phone"
+              placeholder="Ваш номер телефону"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="modal-user-email">
+              Ваша електронна пошта
+            </label>
+            <input
+              class="form-input"
+              type="email"
+              name="user-email"
+              id="modal-user-email"
+              placeholder="Ваша електронна пошта"
+              required
+            />
+          </div>
+
+          <button type="submit" class="form-button button">
+            Записатись безкоштовно
+          </button>
+          <p class="form-terms">
+            Натискаючи на кнопку я погоджуюсь
+            <a class="form-terms-link" href="#">з політикою конфіденційності</a>
+          </p>
+        </form>
       </div>
     </div>
 

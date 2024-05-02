@@ -1,0 +1,77 @@
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer {
+  position: relative;
+  padding: 56px 0;
+  background-color: var(--black-primary-color);
+  background-image: url("../images/footer-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer::after {
+  bottom: 0;
+  right: 0;
+  width: 260px;
+  height: 150px;
+  position: absolute;
+  background-image: url("../images/decor-medicine.png");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.footer-nav,
+.footer-adress {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-adress {
+  position: relative;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.footer-link.no-margin {
+  margin-bottom: 0;
+}
+
+.footer-icons {
+  position: absolute;
+  bottom: -30px;
+  display: flex;
+  gap: 24px;
+}
+
+.address-list,
+.adress-info {
+  flex-basis: 50%;
+}
+
+.footer-link {
+  margin-bottom: 16px;
+  color: var(--white-primary-color);
+  font-size: 16px;
+  line-height: 1.17;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+
+.footer-link:hover {
+  color: var(--blue-primary-color);
+}
+
+.copy-right {
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 1.17;
+  color: var(--grey-secondary-color);
+}
