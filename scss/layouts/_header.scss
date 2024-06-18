@@ -4,14 +4,20 @@
   top: 0;
   right: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(4px);
+
+  @media screen and (min-width: $bp-desktop) {
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(4px);
+  }
 
   &__container {
     display: flex;
     align-items: center;
-    gap: 40px;
-    padding: 32px 0 32px 32px;
+    padding-top: 16px;
+    @media screen and (min-width: $bp-desktop) {
+      padding: 32px 32px 32px 32px;
+      gap: 40px;
+    }
   }
 
   &__nav {
@@ -22,11 +28,15 @@
   }
 
   &__menu {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: center;
-    gap: 56px;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      gap: 56px;
+    }
   }
 
   &__link {
@@ -41,8 +51,28 @@
   }
 
   &__links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
   }
+
+  &__burger {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    fill: var(--white-primary-color);
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+
+  //   &__burger-icon {
+  //   }
 }

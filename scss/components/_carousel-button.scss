@@ -13,14 +13,14 @@
   cursor: pointer;
   transition: background-color 0.3s ease-out, border 0.3s ease-out,
     fill 0.3s ease-out;
-}
 
-.carousel-button:hover {
-  background-color: var(--blue-primary-color);
-  border: var(--white-primary-color);
-  fill: var(--white-primary-color);
-}
+  &:hover {
+    background-color: var(--blue-primary-color);
+    border: var(--white-primary-color);
+    fill: var(--white-primary-color);
+  }
 
-.carousel-button.next {
-  transform: rotate(180deg);
+  &.next {
+    transform: rotate(180deg);
+  }
 }

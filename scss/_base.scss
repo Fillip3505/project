@@ -16,7 +16,17 @@ body {
 
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
-  background-position: center 688px;
+  background-size: auto;
+  background-position: -210px 440px;
+
+  @media screen and (max-width: 460px) {
+    background-size: cover;
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    background-position: center 688px;
+    background-size: auto;
+  }
 }
 
 h1,
@@ -38,4 +48,11 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }

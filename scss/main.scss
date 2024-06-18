@@ -1,8 +1,17 @@
+/* Шрифты и переменные */
 @import "./utils/fonts";
 @import "./utils/variables";
+
+/* Базовые стили */
 @import "./base";
+
+/* Утилиты */
 @import "./utils/utils";
+
+/* Текстовые стили */
 @import "./utils/texts";
+
+/* Макеты */
 @import "./layouts/section";
 @import "./layouts/container";
 @import "./layouts/header";
@@ -11,11 +20,16 @@
 @import "./layouts/adventages-section";
 @import "./layouts/servise-section";
 @import "./layouts/contact-section";
+@import "./layouts/backdrop";
 @import "./layouts/footer";
 @import "./layouts/modal";
+@import "./layouts/mobile-menu";
+
+/* Компоненты */
 @import "./components/service-card";
 @import "./components/adventages-card";
 @import "./components/button";
 @import "./components/carousel-button";
 @import "./components/icons";
 @import "./components/form";
+@import "./components/pagination";
